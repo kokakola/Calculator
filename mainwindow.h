@@ -59,6 +59,8 @@ private slots:
 
     void on_pushButton_C_delete_clicked();
 
+    void on_pushButton_comma_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -71,6 +73,8 @@ private:
     std::vector<int> vec_operations;
     std::string current_num;
     std::string all_num_up_label;
+    int flag_comma;
+    int flag_sign;
 
 private:
     int mode = 0;

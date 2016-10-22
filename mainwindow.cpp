@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     operation = 0;
+    flag_comma = 0;
+    flag_sign = 1;
 
     QGridLayout* layout = new QGridLayout(this);
     setLayout(layout);
@@ -27,76 +29,76 @@ void MainWindow::on_lcdNumber_overflow()
 
 void MainWindow::on_pushButton_addition_clicked()
 {
-    mode++;
-    operation = 1;
+    //mode++;
+    if(flag_sign!=1){
+        operation = 1;
 
-    vec_numbers.push_back(std::atoi(current_num.c_str()));
-    vec_operations.push_back(1);
+        vec_numbers.push_back(std::atof(current_num.c_str()));
+        vec_operations.push_back(1);
 
-    //ui->label->setText(QString(QString::fromStdString(current_num + "+")));
-    all_num_up_label = all_num_up_label + current_num + " + ";
-    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+        //ui->label->setText(QString(QString::fromStdString(current_num + "+")));
+        all_num_up_label = all_num_up_label + current_num + " + ";
+        ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
-    current_num = "";
+        current_num = "";
+        flag_sign = 1;
+    }
 }
 
 void MainWindow::on_pushButton_subtract_clicked()
 {
-    mode++;
-    operation = 2;
+    //mode++;
+    if(flag_sign!=1){
+        operation = 2;
 
-    vec_numbers.push_back(std::atoi(current_num.c_str()));
-    vec_operations.push_back(2);
+        vec_numbers.push_back(std::atof(current_num.c_str()));
+        vec_operations.push_back(2);
 
-    all_num_up_label = all_num_up_label + current_num + " - ";
-    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+        all_num_up_label = all_num_up_label + current_num + " - ";
+        ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
-    current_num = "";
+        current_num = "";
+        flag_sign = 1;
+    }
 }
 
 void MainWindow::on_pushButton_multiply_clicked()
 {
-    mode++;
-    operation = 3;
+    //mode++;
+    if(flag_sign!=1){
+        operation = 3;
 
-    vec_numbers.push_back(std::atoi(current_num.c_str()));
-    vec_operations.push_back(3);
+        vec_numbers.push_back(std::atof(current_num.c_str()));
+        vec_operations.push_back(3);
 
-    all_num_up_label = all_num_up_label + current_num + " × ";
-    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+        all_num_up_label = all_num_up_label + current_num + " × ";
+        ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
-    current_num = "";
+        current_num = "";
+        flag_sign = 1;
+    }
 }
 
 void MainWindow::on_pushButton_devide_clicked()
 {
-    mode++;
-    operation = 4;
+    //mode++;
+    if(flag_sign!=1){
+        operation = 4;
 
-    vec_numbers.push_back(std::atoi(current_num.c_str()));
-    vec_operations.push_back(4);
+        vec_numbers.push_back(std::atof(current_num.c_str()));
+        vec_operations.push_back(4);
 
-    all_num_up_label = all_num_up_label + current_num + " ÷ ";
-    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+        all_num_up_label = all_num_up_label + current_num + " ÷ ";
+        ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
-    current_num = "";
+        current_num = "";
+        flag_sign = 1;
+    }
 }
 
 void MainWindow::on_pushButton_0_clicked()
 {
-    /*if(first_number==""){
-        first_number = "";
-    }
-    else{
-        if(mode==0){
-            first_number = first_number + "0";
-            ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-        }
-        else{
-            second_number = second_number + "0";
-            ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-        }
-    }*/
+    flag_sign = 0;
     if(current_num==""){
         current_num = "";
     }
@@ -108,126 +110,63 @@ void MainWindow::on_pushButton_0_clicked()
 
 void MainWindow::on_pushButton_1_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "1";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "1";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "1";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "2";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "2";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "2";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "3";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "3";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "3";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "4";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "4";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "4";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "5";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "5";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "5";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "6";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "6";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "6";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "7";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "7";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "7";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "8";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "8";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "8";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    /*if(mode==0){
-        first_number = first_number + "9";
-        ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
-    }
-    else{
-        second_number = second_number + "9";
-        ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
-    }*/
+    flag_sign = 0;
     current_num = current_num + "9";
     ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
 }
@@ -237,28 +176,8 @@ void MainWindow::on_pushButton_equal_clicked()
     all_num_up_label = all_num_up_label + current_num;
     ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
-    vec_numbers.push_back(std::atoi(current_num.c_str()));
-    //double a=0;
-    //double b=0;
+    vec_numbers.push_back(std::atof(current_num.c_str()));
     double res = 0;
-
-    /*a = std::atoi(first_number.c_str());
-    b = std::atoi(second_number.c_str());
-
-    if(operation==1){
-        res = a + b;
-    }
-    else if(operation==2){
-        res = a - b;
-    }
-    else if(operation==3){
-        res = a*b;
-    }
-    else if(operation==4){
-        res = a/b;
-    }*/
-
-    //Надо сделать нормально :)
 
     res = vec_numbers[0];
     for(int i=1; i<vec_numbers.capacity(); i++){
@@ -277,16 +196,12 @@ void MainWindow::on_pushButton_equal_clicked()
             res = res/vec_numbers[i];
         }
     }
-
-    //std::string res1 = std::to_string(res);
-    //QString s1 = QString::fromStdString(res1);
-
-    ui->lcdNumber->display(QString(QString::number(res, 'f', 1)));
+    ui->lcdNumber->display(QString(QString::number(res, 'f', 2)));
 }
 
 void MainWindow::on_pushButton_CE_delete_clicked()
 {
-    if(mode==0){
+    /*if(mode==0){
         first_number = "0";
         ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
         first_number = "";
@@ -297,21 +212,29 @@ void MainWindow::on_pushButton_CE_delete_clicked()
         ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
         second_number = "";
         //mode = 1;
-    }
+    }*/
+    current_num = "";
+    ui->lcdNumber->display(QString(QString::fromStdString("0")));
 }
 
 void MainWindow::on_pushButton_AC_delete_clicked()
 {
-    ui->lcdNumber->display(QString(QString::fromStdString("0")));
+    /*ui->lcdNumber->display(QString(QString::fromStdString("0")));
     first_number = "";
     second_number = "";
-    mode = 0;
+    mode = 0;*/
+    vec_numbers.clear();
+    vec_operations.clear();
+    current_num = "";
+    all_num_up_label = "";
+
+    ui->lcdNumber->display(QString(QString::fromStdString("0")));
+    ui->label->setText(QString(QString::fromStdString("")));
 }
 
 void MainWindow::on_pushButton_C_delete_clicked()
 {
-    if(mode==0){
-        //first_number.pop_back();
+    /*if(mode==0){
         first_number.erase(first_number.end()-1);
         if(first_number.length()!=0){
             ui->lcdNumber->display(QString(QString::fromStdString(first_number)));
@@ -321,13 +244,25 @@ void MainWindow::on_pushButton_C_delete_clicked()
         }
     }
     else{
-        //second_number.pop_back();
         second_number.erase(second_number.end()-1);
         if(second_number.length()!=0){
             ui->lcdNumber->display(QString(QString::fromStdString(second_number)));
         }
         else{
             ui->lcdNumber->display(QString(QString::fromStdString("0")));
+        }
+    }*/
+    current_num.erase(current_num.end()-1);
+    ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
+}
+
+void MainWindow::on_pushButton_comma_clicked()
+{
+    if(flag_comma==0){
+        if(current_num!=""){
+            current_num = current_num + ".";
+            ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
+            flag_comma = 1;
         }
     }
 }
