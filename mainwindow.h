@@ -70,6 +70,7 @@ private:
     std::vector<double> vec_numbers;
     std::vector<int> vec_operations;
     std::string current_num;
+    std::string all_num_up_label;
 
 private:
     int mode = 0;

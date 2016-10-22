@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     ui->lcdNumber->display(QString("0"));
+    ui->label->setText(QString(""));
 }
 
 MainWindow::~MainWindow()
@@ -32,6 +33,10 @@ void MainWindow::on_pushButton_addition_clicked()
     vec_numbers.push_back(std::atoi(current_num.c_str()));
     vec_operations.push_back(1);
 
+    //ui->label->setText(QString(QString::fromStdString(current_num + "+")));
+    all_num_up_label = all_num_up_label + current_num + " + ";
+    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+
     current_num = "";
 }
 
@@ -42,6 +47,9 @@ void MainWindow::on_pushButton_subtract_clicked()
 
     vec_numbers.push_back(std::atoi(current_num.c_str()));
     vec_operations.push_back(2);
+
+    all_num_up_label = all_num_up_label + current_num + " - ";
+    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
     current_num = "";
 }
@@ -54,6 +62,9 @@ void MainWindow::on_pushButton_multiply_clicked()
     vec_numbers.push_back(std::atoi(current_num.c_str()));
     vec_operations.push_back(3);
 
+    all_num_up_label = all_num_up_label + current_num + " × ";
+    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+
     current_num = "";
 }
 
@@ -64,6 +75,9 @@ void MainWindow::on_pushButton_devide_clicked()
 
     vec_numbers.push_back(std::atoi(current_num.c_str()));
     vec_operations.push_back(4);
+
+    all_num_up_label = all_num_up_label + current_num + " ÷ ";
+    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
     current_num = "";
 }
@@ -220,6 +234,9 @@ void MainWindow::on_pushButton_9_clicked()
 
 void MainWindow::on_pushButton_equal_clicked()
 {
+    all_num_up_label = all_num_up_label + current_num;
+    ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
+
     vec_numbers.push_back(std::atoi(current_num.c_str()));
     //double a=0;
     //double b=0;

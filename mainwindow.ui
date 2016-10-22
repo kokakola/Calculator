@@ -23,11 +23,16 @@
       <height>71</height>
      </rect>
     </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lcdNumber{
+	background-color: rgb(235, 235, 235);
+	border-style: outset;
+	border-width: 1px;	
+	border-color: rgb(0, 0, 0);
+}</string>
     </property>
     <property name="smallDecimalPoint">
      <bool>false</bool>
@@ -534,6 +539,31 @@
     </property>
     <property name="text">
      <string>9</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>60</y>
+      <width>361</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#label{	
+	font: 75 10pt &quot;Calibri Light&quot;;
+	background-color: rgb(235, 235, 235);
+	border-style: outset;
+	border-width: 1px;	
+	border-color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;TextLabel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
