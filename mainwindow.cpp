@@ -240,6 +240,9 @@ void MainWindow::on_pushButton_equal_clicked()
     else if(operation==4){
         res = a/b;
     }*/
+
+    //Надо сделать нормально :)
+
     res = vec_numbers[0];
     for(int i=1; i<vec_numbers.capacity(); i++){
         //a = vec_numbers[i];
