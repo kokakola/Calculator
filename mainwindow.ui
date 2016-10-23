@@ -53,13 +53,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_comma{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_comma:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -79,13 +79,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_C_delete{	
 	font: 15pt &quot;Calibri Light&quot;;
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(255, 237, 163);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_C_delete:pressed{
-	background-color: rgb(190, 190, 190);
+	background-color: rgb(235, 218, 150);
 	border-style: inset;
 }</string>
     </property>
@@ -104,14 +104,15 @@
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton_devide{
-	font: 20pt &quot;Calibri Light&quot;;
-	background-color: rgb(255, 170, 127);
+	color: rgb(255, 255, 255);
+	font: 30pt &quot;Calibri Light&quot;;
+	background-color: rgb(10, 149, 255);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_devide:pressed{
-	background-color: rgb(229, 152, 114);
+	background-color: rgb(7, 122, 216);
 	border-style: inset;
 }</string>
     </property>
@@ -130,14 +131,15 @@
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton_multiply{
-	font: 20pt &quot;Calibri Light&quot;;
-	background-color: rgb(255, 170, 127);
+	color: rgb(255, 255, 255);
+	font: 30pt &quot;Calibri Light&quot;;
+	background-color: rgb(10, 149, 255);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_multiply:pressed{
-	background-color: rgb(229, 152, 114);
+	background-color: rgb(7, 122, 216);
 	border-style: inset;
 }</string>
     </property>
@@ -156,19 +158,20 @@
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton_subtract{
+	color: rgb(255, 255, 255);
 	font: 30pt &quot;Calibri Light&quot;;
-	background-color: rgb(255, 170, 127);
+	background-color: rgb(10, 149, 255);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_subtract:pressed{
-	background-color: rgb(229, 152, 114);
+	background-color: rgb(7, 122, 216);
 	border-style: inset;
 }</string>
     </property>
     <property name="text">
-     <string>-</string>
+     <string>−</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_addition">
@@ -182,14 +185,15 @@
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton_addition{
-	font: 20pt &quot;Calibri Light&quot;;
-	background-color: rgb(255, 170, 127);
+	color: rgb(255, 255, 255);
+	font: 30pt &quot;Calibri Light&quot;;
+	background-color: rgb(10, 149, 255);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_addition:pressed{
-	background-color: rgb(229, 152, 114);
+	background-color: rgb(7, 122, 216);
 	border-style: inset;
 }</string>
     </property>
@@ -209,13 +213,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_AC_delete{
 	font: 15pt &quot;Calibri Light&quot;;
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(255, 237, 163);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_AC_delete:pressed{
-	background-color: rgb(190, 190, 190);
+	background-color: rgb(235, 218, 150);
 	border-style: inset;
 }</string>
     </property>
@@ -235,13 +239,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_CE_delete{	
 	font: 15pt &quot;Calibri Light&quot;;
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(255, 237, 163);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_CE_delete:pressed{
-	background-color: rgb(190, 190, 190);
+	background-color: rgb(235, 218, 150);
 	border-style: inset;
 }</string>
     </property>
@@ -260,14 +264,15 @@
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton_equal{
-	font: 20pt &quot;Calibri Light&quot;;
-	background-color: rgb(255, 170, 127);
+	color: rgb(255, 255, 255);
+	font: 30pt &quot;Calibri Light&quot;;
+	background-color: rgb(10, 149, 255);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_equal:pressed{
-	background-color: rgb(229, 152, 114);
+	background-color: rgb(7, 122, 216);
 	border-style: inset;
 }</string>
     </property>
@@ -287,13 +292,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_4{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_4:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -316,13 +321,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_3{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_3:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -342,13 +347,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_2{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_2:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -368,13 +373,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_5{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_5:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -394,13 +399,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_0{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_0:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -420,13 +425,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_7{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_7:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -446,13 +451,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_6{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_6:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -475,13 +480,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_8{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_8:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -501,13 +506,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_1{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_1:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>
@@ -527,13 +532,13 @@
     <property name="styleSheet">
      <string notr="true">#pushButton_9{
 	font: 75 18pt &quot;Calibri Light&quot;;
-	background-color: rgb(235, 235, 235);
+	background-color: rgb(255, 255, 219);
 	border-style: outset;
 	border-width: 1px;	
 	border-color: rgb(0, 0, 0);
 }
 #pushButton_9:pressed{
-	background-color: rgb(215, 215, 215);
+	background-color: rgb(238, 235, 194);
 	border-style: inset;
 }</string>
     </property>

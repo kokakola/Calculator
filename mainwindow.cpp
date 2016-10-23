@@ -252,8 +252,16 @@ void MainWindow::on_pushButton_C_delete_clicked()
             ui->lcdNumber->display(QString(QString::fromStdString("0")));
         }
     }*/
-    current_num.erase(current_num.end()-1);
-    ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
+    if(current_num.length()!=0){
+        current_num.erase(current_num.end()-1);
+
+        if(current_num.length()!=0){
+            ui->lcdNumber->display(QString(QString::fromStdString(current_num)));
+        }
+        else{
+            ui->lcdNumber->display(QString(QString::fromStdString("0")));
+        }
+    }
 }
 
 void MainWindow::on_pushButton_comma_clicked()
