@@ -21,7 +21,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_lcdNumber_overflow();
+    //void on_lcdNumber_overflow();
 
     void on_pushButton_addition_clicked();
 
@@ -60,6 +60,10 @@ private slots:
     void on_pushButton_C_delete_clicked();
 
     void on_pushButton_comma_clicked();
+
+    void on_pushButton_sqrt_clicked();
+
+    void on_pushButton_inverse_devision_clicked();
 
 private:
     Ui::MainWindow *ui;
