@@ -185,7 +185,7 @@ void MainWindow::on_pushButton_equal_clicked()
     ui->label->setText(QString(QString::fromStdString(all_num_up_label)));
 
     vec_numbers.push_back(std::atof(current_num.c_str()));
-    double res = 0;
+    res = 0;
 
     res = vec_numbers[0];
     for(int i=1; i<vec_numbers.capacity(); i++){
@@ -207,6 +207,7 @@ void MainWindow::on_pushButton_equal_clicked()
     //ui->lcdNumber->display(QString(QString::number(res, 'f', 2)));
     ui->label_main->setText(QString(QString::number(res, 'f', 2)));
     current_num = "";
+    //current_num = std::to_string(res);
 }
 
 void MainWindow::on_pushButton_CE_delete_clicked()
@@ -293,4 +294,45 @@ void MainWindow::on_pushButton_inverse_devision_clicked()
     cur_num = 1/cur_num;
     current_num = std::to_string(cur_num);
     ui->label_main->setText(QString(QString::number(cur_num, 'f', 2)));
+}
+
+void MainWindow::on_pushButton_percent_clicked()
+{
+    double cur_num = 0;
+    if(current_num!=""){
+        cur_num = std::atof(current_num.c_str());
+    }
+    else{
+        cur_num = res;
+    }
+    cur_num = cur_num/100;
+    current_num = std::to_string(cur_num);
+    ui->label_main->setText(QString(QString::number(cur_num, 'f', 2)));
+}
+
+void MainWindow::on_pushButton_plus_minus_clicked()
+{
+    if(current_num==""){
+        if(res<0){
+            res = -1*res;
+        }
+        else if(res>0){
+            res = -1*res;
+        }
+    }
+    else{
+        char *str = new char[current_num.length()+1];
+        strcpy(str, current_num.c_str());
+        if(str[0]=='-'){
+            int t = current_num.length();
+            current_num = "";
+            for(int i=1; i<t; i++){
+                current_num = current_num + str[i];
+            }
+        }
+        else{
+            current_num = "-" + current_num;
+        }
+    }
+    ui->label_main->setText(QString(QString::fromStdString(current_num)));
 }

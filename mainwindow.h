@@ -65,6 +65,10 @@ private slots:
 
     void on_pushButton_inverse_devision_clicked();
 
+    void on_pushButton_percent_clicked();
+
+    void on_pushButton_plus_minus_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -83,6 +87,7 @@ private:
 private:
     int mode = 0;
     int operation;
+    double res;
 
     std::string first_number;
     std::string second_number;
