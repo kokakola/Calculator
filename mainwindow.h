@@ -73,7 +73,7 @@ private:
     Ui::MainWindow *ui;
 
 private:
-    QPushButton* button[20];
+    //QPushButton* button[20];
     QLabel* answer;
 
 private:
